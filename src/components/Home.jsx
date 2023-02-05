@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import { UserNameContext, UpdateUserNameContext } from '../App'
+import { useUserName, useUpdateUserNameContext } from "./hooks/UserContext";
 
 const Home = () => {
-  const userName = useContext(UserNameContext)
-  const toggleNames = useContext(UpdateUserNameContext)
+  const userName = useUserName()
+  const toggleNames = useUpdateUserNameContext()
   
   return (
     <div>
